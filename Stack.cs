@@ -5,14 +5,14 @@ using System.Threading;
 
 namespace Collections_Ass
 {
-    class Stack
+    class Stack<T>
     {
         public Stack() 
         { 
-            Working = new List<int>();
+            Working = new List<T>();
         }
 
-        public List<int> Working;  
+        public List<T> Working;  
         
 
         public bool isEmpty()
@@ -29,26 +29,26 @@ namespace Collections_Ass
             return Empty;
         }
 
-        public void Push(int number)
+        public void Push(T number)
         {
             Working.Add(number);
             Console.WriteLine($"{number} added successfully to stack");
         }
 
-        public int Pop()
+        public T Pop()
         {
             int last = Working.Count - 1;
-            int popped = Working[last];
+            T popped = Working[last];
             Working.RemoveAt(last);
             Console.WriteLine($"Last number {popped} removed successfully from stack");
             return popped;
         }
 
 
-        public int  Peek()
+        public T  Peek()
         {
             int last = Working.Count - 1;
-            int peek = Working[last];
+            T peek = Working[last];
             Console.WriteLine($"The last number in stack is {peek}");
             return peek;
         }

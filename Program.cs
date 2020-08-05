@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Collections.Generic;
 
 namespace Collections_Ass
 {
@@ -9,7 +10,7 @@ namespace Collections_Ass
         {
             Console.WriteLine("This program demonstrates the behavior of some complex data structures");
             Console.WriteLine("Starting with a stack");
-            Stack guy = new Stack();
+            Stack<int> guy = new Stack<int>();
             Thread.Sleep(2000);
             Console.WriteLine("New Stack created successfully");
             Console.WriteLine("Checking if it's empty");
@@ -57,7 +58,7 @@ namespace Collections_Ass
 
 
             Console.WriteLine("Now, moving on to a Queue");
-            Queue guys = new Queue();
+            Queue<int> guys = new Queue<int>();
             Thread.Sleep(2000);
             Console.WriteLine("New Queue created successfully");
             Console.WriteLine("Checking if it's empty");
@@ -96,6 +97,29 @@ namespace Collections_Ass
             Console.WriteLine("Finally on Queues, let us print out the numbers in our Queue");
             Thread.Sleep(1000);
             guys.Print();
+
+            var seun = new DoubleList<int>();
+            seun.AddHead(2);
+            seun.AddHead(3);
+            seun.AddTail(4);
+            seun.AddTail(5);
+            Console.WriteLine("\n\n");
+            Console.WriteLine("For LinkedList");
+            Console.WriteLine(seun.Search(3));
+            Console.WriteLine(seun.Search(2));
+            seun.Print();
+           // Console.WriteLine(seun.Check(2));
+            //Console.WriteLine(seun.Check(20));
+            //Console.WriteLine(seun.Add(5));
+
+            //seun.Print();
+            
+
+
+
+
+
+
         }
     }
 }

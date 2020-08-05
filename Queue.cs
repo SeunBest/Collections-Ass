@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Collections_Ass
 {
-    class Queue 
+    class Queue<T>
     {
         public Queue()
         {
-            Work = new List<int>();
+            Work = new List<T>();
         }
 
-        public List<int> Work;
+        public List<T> Work;
 
 
         public bool isEmpty()
@@ -28,15 +28,15 @@ namespace Collections_Ass
             return Empty;
         }
 
-        public void Enqueue(int number)
+        public void Enqueue(T number)
         {
             Work.Add(number);
             Console.WriteLine($"{number} added successfully to queue");
         }
 
-        public int Dequeue()
+        public T Dequeue()
         {
-            int popped = Work[0];
+            T popped = Work[0];
             Work.RemoveAt(0);
             Console.WriteLine($"Last number {popped} removed successfully from Queue");
             return popped;
@@ -52,7 +52,7 @@ namespace Collections_Ass
         {
             int last = Work.Count - 1;
             Console.WriteLine("Below are the numbers in the queue");
-            foreach (int i in Work)
+            foreach (T i in Work)
              {
                Console.WriteLine(i);
              }
