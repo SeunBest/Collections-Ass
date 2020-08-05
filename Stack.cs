@@ -12,9 +12,9 @@ namespace Collections_Ass
             Working = new List<T>();
         }
 
-        public List<T> Working;  
-        
+        public List<T> Working;
 
+        //checks if stack is empty
         public bool isEmpty()
         {
             bool Empty = Working.Count < 1;
@@ -29,12 +29,14 @@ namespace Collections_Ass
             return Empty;
         }
 
+        //adds item to stack
         public void Push(T number)
         {
             Working.Add(number);
             Console.WriteLine($"{number} added successfully to stack");
         }
 
+        //remove item from stack and return it to caller
         public T Pop()
         {
             int last = Working.Count - 1;
@@ -44,7 +46,7 @@ namespace Collections_Ass
             return popped;
         }
 
-
+        //checks last number in the stack
         public T  Peek()
         {
             int last = Working.Count - 1;
@@ -53,12 +55,14 @@ namespace Collections_Ass
             return peek;
         }
 
+        //returns the number of items in stack
         public int Size()
         {
             Console.WriteLine($"There are {Working.Count} in the Stack");
             return Working.Count;
         }
 
+        //lists out the items in the stack
         public void Print()
         {
             int last = Working.Count - 1;

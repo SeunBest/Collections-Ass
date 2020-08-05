@@ -106,7 +106,9 @@ namespace Collections_Ass
             Console.WriteLine("\n\n");
             Console.WriteLine("For LinkedList");
             Console.WriteLine(seun.Search(3));
-            Console.WriteLine(seun.Search(2));
+            Console.WriteLine(seun.Check(4));
+            Console.WriteLine(seun.Check(12));
+
             seun.Print();
            // Console.WriteLine(seun.Check(2));
             //Console.WriteLine(seun.Check(20));

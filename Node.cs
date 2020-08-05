@@ -7,6 +7,8 @@ namespace Collections_Ass
 {
     class Node<T>
     {
+        //properties for node
+        //initialize value
         public Node(T value)
         {
             this.Value = value;
